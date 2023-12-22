@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-8#8vto-q&ag@=7weudmqk@6z#g+cptgeq=)7!ovr16k@&(tx1i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['auth.charal.sh']
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
