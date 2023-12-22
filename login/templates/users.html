@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suspicious Activities</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><em>name</em></td>
+    </tr>
+    {% for act in acts %}
+    <tr>
+        <td>{{ act.name }}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<nav>
+    <a href="suspicious_activities/">Suspicious activities</a>
+    <a href="users/">Users</a>
+</nav>
+
+{% if username %}
+<p>Logged in as {{ username }}</p>
+{% else %}
+<p>Logged out</p>
+{% endif %}
+
+<p>Session id: {{ session_id }}</p>
+
+<hr>
+{% for message in messages %}
+<div>
+    <p>{{ message }}</p>
+</div>
+{% endfor %}
+<div>
+    <form action="send_message/" method="post">
+        {% csrf_token %}
+        <label>
+            <input type="text" name="message" style="line-height: 2em; width: 30%;" autofocus required>
+            <!--            <textarea name="message" cols="80" rows="8" required autofocus></textarea>-->
+        </label>
+        <input type="submit" value="Send">
+    </form>
+</div>
+</body>
+</html>
